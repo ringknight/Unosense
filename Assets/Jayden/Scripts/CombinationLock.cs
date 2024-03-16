@@ -44,11 +44,11 @@ public class CombinationLock : MonoBehaviour
         {
             n1 = 9;
         }
-        if(n1 < 0)
+        if(n2 < 0)
         {
             n2 = 9;
         }
-        if(n1 < 0)
+        if(n3 < 0)
         {
             n3 = 9;
         }
