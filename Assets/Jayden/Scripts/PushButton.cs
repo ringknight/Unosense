@@ -18,9 +18,8 @@ public class PushButton : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        //if (collision.gameObject.transform.tag == "Hands")
-        //{
-            //pushed = !pushed;
+        if (collision.gameObject.transform.tag == "Hands")
+        {
             if(toggle)
             {
                 pushed = !pushed;
@@ -30,6 +29,6 @@ public class PushButton : MonoBehaviour
                 pushed = true;
             }
             
-        //}
+        }
     }
 }
