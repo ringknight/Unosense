@@ -6,7 +6,7 @@ public class ReceivePosition1 : MonoBehaviour {
    	public OSC osc;
     public GameObject body;
     public string adressPrefix;
-
+    public float scaleFactor = 1000f;
 
 	// Use this for initialization
 	void Start () {
@@ -21,30 +21,33 @@ public class ReceivePosition1 : MonoBehaviour {
 	}
 
 	void SetBodyX(OscMessage message){
+        Debug.Log(message);
 		float x = message.GetFloat(0);
 
-        Vector3 position = transform.position;
 
-        position.x = x / 100.0f;
 
-        transform.position = position;
+        Vector3 position = body.transform.position;
+
+        position.x = x / scaleFactor;
+
+        body.transform.position = position;
 	}
     void SetBodyY(OscMessage message){
 		float y = message.GetFloat(0);
 
-        Vector3 position = transform.position;
+        Vector3 position = body.transform.position;
 
-        position.y = y / 100.0f;
+        position.y = y / scaleFactor;
 
-        transform.position = position;
+        body.transform.position = position;
 	}
     void SetBodyZ(OscMessage message){
 		float z = message.GetFloat(0);
 
-        Vector3 position = transform.position;
+        Vector3 position = body.transform.position;
 
-        position.z = z / 100.0f;
+        position.z = z / scaleFactor;
 
-        transform.position = position;
+        body.transform.position = position;
 	}
 }

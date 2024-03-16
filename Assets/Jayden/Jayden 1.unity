@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c7207283e60ca647b51e7781e814f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inPort: 6969
+  inPort: 5000
   outIP: 127.0.0.1
   outPort: 6161
 --- !u!114 &3064627
