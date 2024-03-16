@@ -93,7 +93,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568636707276382534}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &8555471169032646883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,8 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63b442f18e5c7c44a54cd3afaae869a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraMoveLimitUp: 25
-  CameraMoveLimitDown: -25
+  CameraMoveLimitVertical: 0
   CameraMoveLimitHorizontal: 25
   CameraZoomLimitOut: 5
   CameraZoomLimitIn: 20
