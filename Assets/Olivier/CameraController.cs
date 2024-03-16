@@ -10,8 +10,7 @@ using System.Threading;
 public class CameraController : MonoBehaviour
 {
     [Header("Camera Limits")]
-    [Tooltip("This defines the rotation limit of the camera on the Y Axis at the top")][SerializeField] private float CameraMoveLimitUp;
-    [Tooltip("This defines the rotation limit of the camera on the Y Axis at the bottom")][SerializeField] private float CameraMoveLimitDown;
+    [Tooltip("This defines the rotation limit of the camera on the Y Axis at the top")][SerializeField] private float CameraMoveLimitVertical;    
     [Tooltip("This defines the rotation limit of the camera on the X Axis on the left")][SerializeField] private float CameraMoveLimitHorizontal;
     [Tooltip("This defines the Zoom (FieldOfView) limit of the camera when zooming out")][SerializeField] private float CameraZoomLimitOut;
     [Tooltip("This defines the Zoom (FieldOfView) limit of the camera when zooming in")][SerializeField] private float CameraZoomLimitIn;
@@ -62,8 +61,10 @@ public class CameraController : MonoBehaviour
         InitialCameraRotationY = trans.rotation.eulerAngles.y;
         InitialFieldOfView = cam.fieldOfView;
 
-        initialZoom = cam.fieldOfView;
+        //currentRotationX = trans.rotation.eulerAngles.x;
+        //currentRotationY = trans.rotation.eulerAngles.y;
 
+        initialZoom = cam.fieldOfView;
     }
 
     // Update is called once per frame
@@ -76,26 +77,21 @@ public class CameraController : MonoBehaviour
         // Y POSITIVE = MOVE UP
         // Y NEGATIVE = MOVE DOWN
 
-        float adjustedInitialXRotation = (InitialCameraRotationX > 180) ? InitialCameraRotationX - 360 : InitialCameraRotationX;
+        //float adjustedInitialXRotation = (InitialCameraRotationX > 180) ? InitialCameraRotationX - 360 : InitialCameraRotationX;
 
         // Get input from the joystick
         float inputY = Input.GetAxis("Vertical") * CameraMoveSpeed * Time.deltaTime;
         float inputX = Input.GetAxis("Horizontal") * CameraMoveSpeed * Time.deltaTime;
 
-
         // Calculate new X (pitch) rotation, ensuring it doesn't exceed the vertical limits
         currentRotationX += inputY;
-        currentRotationX = Mathf.Clamp(currentRotationX, CameraMoveLimitDown, CameraMoveLimitUp);
+        currentRotationX = Mathf.Clamp(currentRotationX, -CameraMoveLimitVertical, CameraMoveLimitVertical);
 
-        // Calculate new Y (yaw) rotation, applying horizontal limits
         currentRotationY += inputX;
-        // The horizontal rotation could be allowed to rotate freely or clamped similar to vertical rotation,
-        // For free horizontal rotation, simply add the input to the current rotation without clamping.
-        // If clamping is desired, uncomment the following line and adjust as necessary.
-        currentRotationY = Mathf.Clamp(currentRotationY, InitialCameraRotationY - CameraMoveLimitHorizontal, InitialCameraRotationY + CameraMoveLimitHorizontal);
+        currentRotationY = Mathf.Clamp(currentRotationY, -CameraMoveLimitHorizontal, CameraMoveLimitHorizontal);
 
         // Apply the rotations to the camera
-        transform.localEulerAngles = new Vector3(-currentRotationX, InitialCameraRotationY + currentRotationY, 0f);
+        trans.localEulerAngles = new Vector3(InitialCameraRotationX - currentRotationX, InitialCameraRotationY + currentRotationY, 0f);
 
         float triggerRight = Gamepad.current.rightTrigger.ReadValue();
         float triggerLeft = Gamepad.current.leftTrigger.ReadValue();
