@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +10,7 @@ public class ChangeCameraController : MonoBehaviour
     public Camera[] cameras;
     private int currentCameraIndex;
     private bool canSwitch = true; // Debounce flag
+    public GameObject[] lasers;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,26 @@ public class ChangeCameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        if (Input.GetButtonDown("Fire1"))
+        {
+            foreach (GameObject laser in lasers)
+            {
+                laser.GetComponent<LaserManager>().DeactivateLaser();
+                Debug.Log("Deactivating Lasers...");
+            }
+        }
+        
+        if (Input.GetButtonDown("Jump"))
+        {
+            foreach (GameObject laser in lasers)
+            {
+                laser.GetComponent<LaserManager>().ActivateLaser();
+                Debug.Log("Activating Lasers...");
+            }
+        }
+
+
         // Check if B button is pressed
         if (Input.GetButtonDown("Fire2") && canSwitch)
         {
