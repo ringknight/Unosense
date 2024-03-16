@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63b442f18e5c7c44a54cd3afaae869a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraMoveLimitVertical: 0
+  CameraMoveLimitVertical: 25
   CameraMoveLimitHorizontal: 25
   CameraZoomLimitOut: 5
   CameraZoomLimitIn: 20
