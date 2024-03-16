@@ -5,6 +5,7 @@ using UnityEngine;
 public class PushButton : MonoBehaviour
 {
     public bool pushed, toggle, timed;
+    private bool pushedDiff;
     public float timer;
     public GameObject button;
     public Material red, green;
@@ -20,7 +21,14 @@ public class PushButton : MonoBehaviour
         {
             button.transform.localPosition = new Vector3(0,0.475f,0);
             button.GetComponent<MeshRenderer>().material = green;
+            if(timed && pushedDiff != pushed)
+            {
+                pushedDiff = true;
+                StopCoroutine("Timer");
+                StartCoroutine("Timer");
+            }
         }else{
+            pushedDiff = false;
             button.transform.localPosition = new Vector3(0,0.55f,0);
             button.GetComponent<MeshRenderer>().material = red;
         }
@@ -40,5 +48,10 @@ public class PushButton : MonoBehaviour
             }
             
         }
+    }
+    IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(timer);
+        pushed = false;
     }
 }

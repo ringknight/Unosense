@@ -33,6 +33,10 @@ public class Door : MonoBehaviour
         {
             open = true;
         }
+        if(open)
+        {
+            GetComponent<Animator>().SetBool("Opened", true);
+        }
     }
 
     void OnTriggerEnter(Collider collision)
