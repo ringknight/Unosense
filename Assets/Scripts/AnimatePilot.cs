@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ReceivePosition1 : MonoBehaviour {
+public class AnimatePilot : MonoBehaviour {
     
    	public OSC osc;
     public GameObject head, rightHand, leftHand, rightAnkle, leftAnkle;
@@ -33,103 +33,103 @@ public class ReceivePosition1 : MonoBehaviour {
     void SetLeftHandX(OscMessage message)
     {
         float x = message.GetFloat(0);
-        Vector3 position = leftHand.transform.position;
+        Vector3 position = leftHand.transform.localPosition;
         position.x = x / scaleFactor;
-        leftHand.transform.position = position;
+        leftHand.transform.localPosition = position;
     }
     void SetLeftHandY(OscMessage message)
     {
         float y = message.GetFloat(0);
-        Vector3 position = leftHand.transform.position;
+        Vector3 position = leftHand.transform.localPosition;
         position.y = y / scaleFactor;
-        leftHand.transform.position = position;
+        leftHand.transform.localPosition = position;
     }
     void SetLeftHandZ(OscMessage message)
     {
         float z = message.GetFloat(0);
-        Vector3 position = leftHand.transform.position;
+        Vector3 position = leftHand.transform.localPosition;
         position.z = z / scaleFactor;
-        leftHand.transform.position = position;
+        leftHand.transform.localPosition = position;
     }
     void SetRightHandX(OscMessage message)
     {
         float x = message.GetFloat(0);
-        Vector3 position = rightHand.transform.position;
+        Vector3 position = rightHand.transform.localPosition;
         position.x = x / scaleFactor;
-        rightHand.transform.position = position;
+        rightHand.transform.localPosition = position;
     }
     void SetRightHandY(OscMessage message)
     {
         float y = message.GetFloat(0);
-        Vector3 position = rightHand.transform.position;
+        Vector3 position = rightHand.transform.localPosition;
         position.y = y / scaleFactor;
-        rightHand.transform.position = position;
+        rightHand.transform.localPosition = position;
     }
     void SetRightHandZ(OscMessage message)
     {
         float z = message.GetFloat(0);
-        Vector3 position = rightHand.transform.position;
+        Vector3 position = rightHand.transform.localPosition;
         position.z = z / scaleFactor;
-        rightHand.transform.position = position;
+        rightHand.transform.localPosition = position;
     }
     void SetLeftAnkleX(OscMessage message)
     {
         float x = message.GetFloat(0);
-        Vector3 position = leftAnkle.transform.position;
+        Vector3 position = leftAnkle.transform.localPosition;
         position.x = x / scaleFactor;
-        leftAnkle.transform.position = position;
+        leftAnkle.transform.localPosition = position;
     }
     void SetLeftAnkleY(OscMessage message)
     {
         float y = message.GetFloat(0);
-        Vector3 position = leftAnkle.transform.position;
+        Vector3 position = leftAnkle.transform.localPosition;
         position.y = y / scaleFactor;
-        leftAnkle.transform.position = position;
+        leftAnkle.transform.localPosition = position;
     }
     void SetLeftAnkleZ(OscMessage message)
     {
         float z = message.GetFloat(0);
-        Vector3 position = leftAnkle.transform.position;
+        Vector3 position = leftAnkle.transform.localPosition;
         position.z = z / scaleFactor;
-        leftAnkle.transform.position = position;
+        leftAnkle.transform.localPosition = position;
     }
     void SetRightAnkleX(OscMessage message)
     {
         float x = message.GetFloat(0);
-        Vector3 position = rightAnkle.transform.position;
+        Vector3 position = rightAnkle.transform.localPosition;
         position.x = x / scaleFactor;
-        rightAnkle.transform.position = position;
+        rightAnkle.transform.localPosition = position;
     }
     void SetRightAnkleY(OscMessage message)
     {
         float y = message.GetFloat(0);
-        Vector3 position = rightAnkle.transform.position;
+        Vector3 position = rightAnkle.transform.localPosition;
         position.y = y / scaleFactor;
-        rightAnkle.transform.position = position;
+        rightAnkle.transform.localPosition = position;
     }
     void SetRightAnkleZ(OscMessage message)
     {
         float z = message.GetFloat(0);
-        Vector3 position = rightAnkle.transform.position;
+        Vector3 position = rightAnkle.transform.localPosition;
         position.z = z / scaleFactor;
-        rightAnkle.transform.position = position;
+        rightAnkle.transform.localPosition = position;
     }
     void SetHeadX(OscMessage message){
 		float x = message.GetFloat(0);
-        Vector3 position = head.transform.position;
+        Vector3 position = head.transform.localPosition;
         position.x = x / scaleFactor;
-        head.transform.position = position;
+        head.transform.localPosition = position;
 	}
     void SetHeadY(OscMessage message){
 		float y = message.GetFloat(0);
-        Vector3 position = head.transform.position;
+        Vector3 position = head.transform.localPosition;
         position.y = y / scaleFactor;
-        head.transform.position = position;
+        head.transform.localPosition = position;
 	}
     void SetHeadZ(OscMessage message){
 		float z = message.GetFloat(0);
-        Vector3 position = head.transform.position;
+        Vector3 position = head.transform.localPosition;
         position.z = z / scaleFactor;
-        head.transform.position = position;
+        head.transform.localPosition = position;
 	}
 }
