@@ -7,7 +7,7 @@ public class Kickable : MonoBehaviour
     [SerializeField] float bump_speed = 3;
     [SerializeField] float torque_speed = 150;
     Rigidbody rb;
-    bool can_kick = true;
+    //bool can_kick = true;
 
     // Start is called before the first frame update
     void Start()
