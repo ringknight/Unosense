@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CombinationLock : MonoBehaviour
 {
     public int n1, n2, n3, combination;
     public bool unlocked;
+    public TMP_Text n1Display, n2Display, n3Display;
 
     void Start()
     {
@@ -16,7 +18,16 @@ public class CombinationLock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        combination = n1 * 100 + n2 * 10 + n3;
+        n1Display.text = n1 + "";
+        n2Display.text = n2 + "";
+        n3Display.text = n3 + "";
+
+        
+        if(combination == n1 * 100 + n2 * 10 + n3)
+        {
+            unlocked = true;
+        }
+
         if(n1 > 9)
         {
             n1 = 0;

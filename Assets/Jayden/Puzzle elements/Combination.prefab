@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d67be8a780c1884a9e62c8d92c05da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  combinationLock: {fileID: 0}
+  combinationLock: {fileID: 2830355206578528823}
   n: 1
   factor: -1
 --- !u!135 &8168150097483041722
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d67be8a780c1884a9e62c8d92c05da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  combinationLock: {fileID: 0}
+  combinationLock: {fileID: 2830355206578528823}
   n: 1
   factor: 1
 --- !u!135 &2770536375401245892
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d67be8a780c1884a9e62c8d92c05da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  combinationLock: {fileID: 0}
+  combinationLock: {fileID: 2830355206578528823}
   n: 2
   factor: 1
 --- !u!135 &6201759269054728202
@@ -715,7 +715,11 @@ MonoBehaviour:
   n1: 0
   n2: 0
   n3: 0
-  combination: 0
+  combination: 516
+  unlocked: 0
+  n1Display: {fileID: 115490792397385626}
+  n2Display: {fileID: 1306966932443872235}
+  n3Display: {fileID: 6318554395948173865}
 --- !u!1 &3140818913077572268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,7 +1178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d67be8a780c1884a9e62c8d92c05da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  combinationLock: {fileID: 0}
+  combinationLock: {fileID: 2830355206578528823}
   n: 3
   factor: 1
 --- !u!135 &7188213450882322487
@@ -1463,7 +1467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d67be8a780c1884a9e62c8d92c05da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  combinationLock: {fileID: 0}
+  combinationLock: {fileID: 2830355206578528823}
   n: 3
   factor: -1
 --- !u!135 &7503611586665181037
@@ -1614,7 +1618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d67be8a780c1884a9e62c8d92c05da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  combinationLock: {fileID: 0}
+  combinationLock: {fileID: 2830355206578528823}
   n: 2
   factor: -1
 --- !u!135 &3839778143927220980
