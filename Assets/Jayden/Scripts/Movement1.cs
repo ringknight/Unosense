@@ -14,5 +14,14 @@ public class Movement1 : MonoBehaviour
     void FixedUpdate()
     {
         gameObject.transform.position += new Vector3(Input.GetAxis("Horizontal") * speed/10, 0, Input.GetAxis("Vertical") * speed/10);
+        //if(Input.GetKey("q"))
+        //{
+        //    gameObject.transform.rotation
+        //    //gameObject.transform.rotation = Quaternion.Euler(gameObject.transform.rotation.x + 1,0,0);
+        //}
+        //if(Input.GetKey("e"))
+        //{
+        //   //gameObject.transform.rotation.x += -1; 
+        //}
     }
 }

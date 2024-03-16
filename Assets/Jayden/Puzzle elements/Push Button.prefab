@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 2994835292795707360}
   - component: {fileID: 1412731859187906616}
   m_Layer: 0
-  m_Name: PushButton
+  m_Name: Push Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +115,7 @@ Transform:
   m_GameObject: {fileID: 6924796657900471187}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: -2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -188,6 +188,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushed: 0
   toggle: 0
+  timed: 0
+  timer: 0
+  button: {fileID: 5485426301208744464}
+  red: {fileID: 2100000, guid: 3f9ec165789554c438f7dd38bb768930, type: 2}
+  green: {fileID: 2100000, guid: b70b2c25087eca047ad25468e749fd92, type: 2}
 --- !u!135 &2994835292795707360
 SphereCollider:
   m_ObjectHideFlags: 0
