@@ -18,5 +18,9 @@ public class DoorSignal : MonoBehaviour
         {
             activated = puzzleElement.GetComponent<PushButton>().pushed;
         }
+        if(puzzleElement.name.Contains("Combination"))
+        {
+            activated = puzzleElement.GetComponent<CombinationLock>().unlocked;
+        }
     }
 }
