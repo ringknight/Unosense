@@ -720,6 +720,14 @@ MonoBehaviour:
   n1Display: {fileID: 115490792397385626}
   n2Display: {fileID: 1306966932443872235}
   n3Display: {fileID: 6318554395948173865}
+  green: {fileID: 2100000, guid: b70b2c25087eca047ad25468e749fd92, type: 2}
+  arrows:
+  - {fileID: 1290902116484198200}
+  - {fileID: 349711106833936061}
+  - {fileID: 2011100152976510676}
+  - {fileID: 6439061851039209882}
+  - {fileID: 5834885243104937711}
+  - {fileID: 6133713276306028038}
 --- !u!1 &3140818913077572268
 GameObject:
   m_ObjectHideFlags: 0

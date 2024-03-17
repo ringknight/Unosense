@@ -93,8 +93,13 @@ public class CameraController : MonoBehaviour
         // Apply the rotations to the camera
         trans.localEulerAngles = new Vector3(InitialCameraRotationX - currentRotationX, InitialCameraRotationY + currentRotationY, 0f);
 
-        float triggerRight = Gamepad.current.rightTrigger.ReadValue();
-        float triggerLeft = Gamepad.current.leftTrigger.ReadValue();
+        float triggerRight = 0;
+        float triggerLeft = 0;
+        if (Gamepad.current != null)
+        {
+            triggerRight = Gamepad.current.rightTrigger.ReadValue();
+            triggerLeft = Gamepad.current.leftTrigger.ReadValue();
+        }
 
 
         if(triggerRight > bumperSensitivity && triggerLeft > bumperSensitivity)
