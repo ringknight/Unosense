@@ -112,7 +112,6 @@ public class GlobalGameManager : MonoBehaviour
         activeWires.Remove(wire);
     }
 
-    public void LoadScene(string sceneName)
     public void LoadNextScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
