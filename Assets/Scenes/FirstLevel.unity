@@ -1274,6 +1274,11 @@ PrefabInstance:
       propertyPath: torque_speed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 3780838555692119220, guid: 4b7726cc7d3f0ea4db52177099a34203,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.514
+      objectReference: {fileID: 0}
     - target: {fileID: 6430077290110294022, guid: 4b7726cc7d3f0ea4db52177099a34203,
         type: 3}
       propertyPath: m_Name
