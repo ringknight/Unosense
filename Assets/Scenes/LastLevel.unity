@@ -3228,6 +3228,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1482094751923769037, guid: cdda805798b294c429a4c84784d9fab3,
         type: 3}
+      propertyPath: nextScene
+      value: End
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482094751923769037, guid: cdda805798b294c429a4c84784d9fab3,
+        type: 3}
       propertyPath: signals.Array.size
       value: 1
       objectReference: {fileID: 0}

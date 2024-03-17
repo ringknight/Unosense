@@ -22,6 +22,9 @@ public class Bomb : MonoBehaviour
 
     public void Explode()
     {
-        EndGame.SetActive(true);
+        if (!disarmed)
+        {
+            EndGame.SetActive(true);
+        }
     }
 }
