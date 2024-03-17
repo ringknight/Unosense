@@ -9,7 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/LVL - Lasers.unity
+    path: Assets/Scenes/FirstLevel.unity
+    guid: 0b69337d9ecbaa344b6aa1fbf4b03ae2
+  - enabled: 1
+    path: Assets/Scenes/SecondLevel.unity
     guid: 3281502dd3e482f428d523261ecae9c9
+  - enabled: 1
+    path: Assets/Scenes/LastLevel.unity
+    guid: 97368a2abb064e84e8f77d6a70d0f0ff
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
