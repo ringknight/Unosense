@@ -27,6 +27,7 @@ public class Kickable : MonoBehaviour
         {
             if(rb != null)
             {
+                Debug.Log("lol");
                 rb.velocity = (Vector3.up + new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)) * bump_speed);
                 rb.AddTorque((Vector3.forward * 0.5f + Vector3.up) * torque_speed);
             }
