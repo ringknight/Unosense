@@ -1,11 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.VersionControl;
 using UnityEngine.InputSystem;
 using UnityEngine;
-using System.Xml.Schema;
-using System.Runtime.CompilerServices;
-using System.Threading;
 
 public class CameraController : MonoBehaviour
 {
