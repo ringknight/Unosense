@@ -24,12 +24,12 @@ public class LaserController : MonoBehaviour
         {
             foreach(GameObject laser in lasers)
             {
-                laser.SetActive(true);
+                laser.GetComponent<LaserManager>().ActivateLaser();
             }
         }else{
             foreach(GameObject laser in lasers)
             {
-                laser.SetActive(false);
+                laser.GetComponent<LaserManager>().DeactivateLaser();
             }
         }
         
