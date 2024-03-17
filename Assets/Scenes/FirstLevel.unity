@@ -261,7 +261,7 @@ PrefabInstance:
     - target: {fileID: 3035581788448688269, guid: 2777b724b3cd8bf488b69d013ddee63a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.72
+      value: 1.701
       objectReference: {fileID: 0}
     - target: {fileID: 3035581788448688269, guid: 2777b724b3cd8bf488b69d013ddee63a,
         type: 3}
@@ -863,6 +863,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1482094751923769037, guid: cdda805798b294c429a4c84784d9fab3,
         type: 3}
+      propertyPath: nextScene
+      value: SecondLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482094751923769037, guid: cdda805798b294c429a4c84784d9fab3,
+        type: 3}
       propertyPath: signals.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -894,7 +899,7 @@ PrefabInstance:
     - target: {fileID: 7273253567269715721, guid: cdda805798b294c429a4c84784d9fab3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.25
+      value: -2.191
       objectReference: {fileID: 0}
     - target: {fileID: 7273253567269715721, guid: cdda805798b294c429a4c84784d9fab3,
         type: 3}
@@ -1019,7 +1024,7 @@ SpriteRenderer:
   m_Size: {x: 9.8, y: 9.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1386790854
@@ -1117,7 +1122,7 @@ PrefabInstance:
     - target: {fileID: 3035581788448688269, guid: 2777b724b3cd8bf488b69d013ddee63a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.72
+      value: 1.683
       objectReference: {fileID: 0}
     - target: {fileID: 3035581788448688269, guid: 2777b724b3cd8bf488b69d013ddee63a,
         type: 3}
@@ -1467,7 +1472,7 @@ PrefabInstance:
     - target: {fileID: 3035581788448688269, guid: 2777b724b3cd8bf488b69d013ddee63a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.784
+      value: 1.734
       objectReference: {fileID: 0}
     - target: {fileID: 3035581788448688269, guid: 2777b724b3cd8bf488b69d013ddee63a,
         type: 3}

@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Hands
   - Feet
+  - ExitButton
+  - CreditButton
+  - NewGameButton
+  - SpeedrunButton
+  - UNOPOWER
   layers:
   - Default
   - TransparentFX
