@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -23,6 +24,49 @@ public class GlobalGameManager : MonoBehaviour
 
     private void Awake()
     {
+        try
+        {
+            //Initialize buttons
+            if (exitButton == null)
+            {
+                // Find the button by tag, name, or directly assign it in the inspector
+                exitButton = GameObject.FindWithTag("ExitButton").GetComponent<Button>();
+                Debug.Log(exitButton.name);
+            }
+            exitButton.onClick.AddListener(instance.QuitGame);
+
+
+            if (newGameButton == null)
+            {
+                // Find the button by tag, name, or directly assign it in the inspector
+                newGameButton = GameObject.FindWithTag("NewGameButton").GetComponent<Button>();
+                Debug.Log(newGameButton.name);
+            }
+            newGameButton.onClick.AddListener(instance.NewGame);
+
+
+            if (creditsButton == null)
+            {
+                // Find the button by tag, name, or directly assign it in the inspector
+                creditsButton = GameObject.FindWithTag("CreditButton").GetComponent<Button>();
+                Debug.Log(creditsButton.name);
+            }
+            creditsButton.onClick.AddListener(instance.Credits);
+
+
+            if (speedRunButton == null)
+            {
+                // Find the button by tag, name, or directly assign it in the inspector
+                speedRunButton = GameObject.FindWithTag("SpeedrunButton").GetComponent<Button>();
+                Debug.Log(speedRunButton.name);
+            }
+            speedRunButton.onClick.AddListener(instance.SpeedRun);
+
+        } catch
+        {
+            Debug.Log("RWAR");
+        }
+
         // Ensure there is only one instance of the GlobalGameManager
         if (instance == null)
         {
@@ -33,40 +77,6 @@ public class GlobalGameManager : MonoBehaviour
         {
             Destroy(gameObject); // Destroy duplicate instances
         }
-        if (exitButton == null)
-        {
-            // Find the button by tag, name, or directly assign it in the inspector
-            exitButton = GameObject.FindWithTag("ExitButton").GetComponent<Button>();
-            Debug.Log(exitButton.name);
-        }
-        exitButton.onClick.AddListener(instance.QuitGame);
-
-
-        if (newGameButton == null)
-        {
-            // Find the button by tag, name, or directly assign it in the inspector
-            newGameButton = GameObject.FindWithTag("NewGameButton").GetComponent<Button>();
-            Debug.Log(newGameButton.name);
-        }
-        newGameButton.onClick.AddListener(instance.NewGame);
-
-
-        if (creditsButton == null)
-        {
-            // Find the button by tag, name, or directly assign it in the inspector
-            creditsButton = GameObject.FindWithTag("CreditButton").GetComponent<Button>();
-            Debug.Log(creditsButton.name);
-        }
-        creditsButton.onClick.AddListener(instance.Credits);
-
-
-        if (speedRunButton == null)
-        {
-            // Find the button by tag, name, or directly assign it in the inspector
-            speedRunButton = GameObject.FindWithTag("SpeedrunButton").GetComponent<Button>();
-            Debug.Log(speedRunButton.name);
-        }
-        speedRunButton.onClick.AddListener(instance.SpeedRun);
 
         //StartCoroutine(InitialLoad());
     }
