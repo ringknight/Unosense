@@ -28,20 +28,20 @@ public class ChangeCameraController : MonoBehaviour
         
         if (Input.GetButtonDown("Fire1"))
         {
-            foreach (GameObject laser in lasers)
+            /*foreach (GameObject laser in lasers)
             {
                 laser.GetComponent<LaserManager>().DeactivateLaser();
                 Debug.Log("Deactivating Lasers...");
-            }
+            }*/
         }
         
         if (Input.GetButtonDown("Jump"))
         {
-            foreach (GameObject laser in lasers)
+            /*foreach (GameObject laser in lasers)
             {
                 laser.GetComponent<LaserManager>().ActivateLaser();
                 Debug.Log("Activating Lasers...");
-            }
+            }*/
         }
 
 

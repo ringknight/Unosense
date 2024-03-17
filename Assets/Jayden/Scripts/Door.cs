@@ -8,6 +8,7 @@ public class Door : MonoBehaviour
     public GameObject[] signals;
     public bool open;
     public string nextScene;
+
     void Start()
     {
         
@@ -49,6 +50,7 @@ public class Door : MonoBehaviour
 
     void GoToNextScene()
     {
+        
         SceneManager.LoadScene(nextScene);
     }
 }

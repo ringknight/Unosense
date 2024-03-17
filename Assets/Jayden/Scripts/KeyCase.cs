@@ -20,6 +20,7 @@ public class KeyCase : MonoBehaviour
             }
         }else{
             activated = true;
+            puzzleElement.GetComponent<PushButton>().pushed = false;
         }
 
         if(activated)
