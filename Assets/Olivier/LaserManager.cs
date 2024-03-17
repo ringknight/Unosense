@@ -27,11 +27,15 @@ public class LaserManager : MonoBehaviour
     {
         
     }
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
         // Play the sound effect
-        audioSource.Play();
-        StartCoroutine(WaitForSound());
+        if(collision.gameObject.transform.tag == "Player")
+        {
+            audioSource.Play();
+            StartCoroutine(WaitForSound());
+        }
+        
 
         // Call the LaserDisappear function
         //LaserDisappear();
@@ -39,7 +43,11 @@ public class LaserManager : MonoBehaviour
 
     public void ActivateLaser()
     {
-        Debug.Log("WOOOOOOOOOOOT...");
+        audioSource = GetComponent<AudioSource>();
+        renderers = GetComponents<MeshRenderer>();
+        colliders = GetComponents<CapsuleCollider>();
+
+        //Debug.Log("WOOOOOOOOOOOT...");
         laserActive = true; 
         foreach (CapsuleCollider collider in colliders)
         {
@@ -68,7 +76,7 @@ public class LaserManager : MonoBehaviour
         }
     }
 
-    IEnumerator WaitForSound()
+    public IEnumerator WaitForSound()
     {
         //Wait Until Sound has finished playing
         while (audioSource.isPlaying)

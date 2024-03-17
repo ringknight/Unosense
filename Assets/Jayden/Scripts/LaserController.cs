@@ -20,16 +20,44 @@ public class LaserController : MonoBehaviour
             activated = puzzleElement.GetComponent<PushButton>().pushed;
         }
 
-        if(activated)
+
+        foreach(GameObject laser in lasers)
         {
-            foreach(GameObject laser in lasers)
+            if(activated && laser.activeInHierarchy == false)
             {
+                laser.SetActive(true);
                 laser.GetComponent<LaserManager>().ActivateLaser();
             }
-        }else{
-            foreach(GameObject laser in lasers)
+        }
+
+
+        //if(activated && laser.activeInHierarchy)
+        //{
+        //    foreach(GameObject laser in lasers)
+        //    {
+        //        laser.SetActive(true);
+        //        laser.GetComponent<LaserManager>().ActivateLaser();
+        //    }
+        //}else{
+        //    //foreach(GameObject laser in lasers)
+        //    //{
+        //    //    if(laser.GetComponent<LaserManager>().laserActive)
+        //    //    {
+        //    //        laser.GetComponent<LaserManager>().DeactivateLaser();
+        //    //    }
+        //    //}
+        //}
+        foreach(GameObject laser in lasers)
+        {
+            if((laser.GetComponent<LaserManager>().laserActive == false && laser.activeInHierarchy) || activated == false)
             {
-                laser.GetComponent<LaserManager>().DeactivateLaser();
+                activated = false;
+                if(puzzleElement.name.Contains("Push Button"))
+                {
+                    puzzleElement.GetComponent<PushButton>().pushed = false;
+                }
+                //laser.GetComponent<LaserManager>().StartCoroutine("WaitForSound");
+                laser.SetActive(false);
             }
         }
         

@@ -105,7 +105,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -136,7 +136,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -149,7 +149,8 @@ AudioSource:
   m_GameObject: {fileID: 2202967056330611032}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 4be6eb4976f991c43a9d1d78f33c2139,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 438a36992317cc04aa1a96371568a3a4, type: 3}
   m_Resource: {fileID: 8300000, guid: 438a36992317cc04aa1a96371568a3a4, type: 3}
   m_PlayOnAwake: 0
