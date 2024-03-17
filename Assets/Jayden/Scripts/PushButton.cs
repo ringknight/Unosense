@@ -27,6 +27,11 @@ public class PushButton : MonoBehaviour
                 StopCoroutine("Timer");
                 StartCoroutine("Timer");
             }
+            if(!timed && pushedDiff != pushed)
+            {
+                pushedDiff = true;
+                GetComponent<AudioSource>().Play();
+            }
         }else{
             pushedDiff = false;
             button.transform.localPosition = new Vector3(0,0.55f,0);

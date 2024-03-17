@@ -53,4 +53,8 @@ public class Door : MonoBehaviour
         
         SceneManager.LoadScene(nextScene);
     }
+    public void PlaySound()
+    {
+        GetComponent<AudioSource>().Play();
+    }
 }
