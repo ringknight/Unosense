@@ -985,6 +985,7 @@ GameObject:
   - component: {fileID: 6217872350664651755}
   - component: {fileID: 1243884074562492905}
   - component: {fileID: 3661764217133795133}
+  - component: {fileID: 820733155879501609}
   m_Layer: 0
   m_Name: Dice
   m_TagString: Untagged
@@ -1075,7 +1076,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1125,8 +1126,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a861163638774f7498ce1c2c05621c01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bump_speed: 3
-  torque_speed: 200
+  bump_speed: 2
+  torque_speed: 20
+--- !u!114 &820733155879501609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6430077290110294022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59e6fc0c0182e5e4c8db2c04022fb7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravityScale: 0.3
 --- !u!1 &6861441393114975134
 GameObject:
   m_ObjectHideFlags: 0
