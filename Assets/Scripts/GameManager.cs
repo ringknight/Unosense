@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,6 +14,10 @@ public class GlobalGameManager : MonoBehaviour
     public Button exitButton;
 
     private static GlobalGameManager instance;
+    public static List<GameObject> activeWires = new List<GameObject>();
+    public static GameObject bomb;
+
+    private string bombWireToDisarm = "PinkWire";
     public Animator fadeAnimator;
     public float transitionTime = 1f;
 
@@ -64,6 +69,47 @@ public class GlobalGameManager : MonoBehaviour
         speedRunButton.onClick.AddListener(instance.SpeedRun);
 
         //StartCoroutine(InitialLoad());
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            checkWireCut();
+        }
+    }
+
+    private void checkWireCut()
+    {
+        if (activeWires.Count != 1)
+        {
+            return;
+        }
+
+        if (activeWires[0].name.Contains(bombWireToDisarm))
+        {
+            Debug.Log("Good wire!");
+            Bomb script = bomb.GetComponent<Bomb>();
+            if(script != null)
+            {
+                script.disarmed = true;
+            }
+
+        } else
+        {
+            Debug.Log("Wrong wire!");
+            Debug.Log("BOOM!");
+        }
+    }
+
+    public static void AddWireActive(GameObject wire)
+    {
+        activeWires.Add(wire);
+    }
+
+    public static void RemoveWireActive(GameObject wire)
+    {
+        activeWires.Remove(wire);
     }
 
     public void LoadNextScene(string sceneName)
@@ -128,6 +174,11 @@ public class GlobalGameManager : MonoBehaviour
         Application.Quit();
     }
 
+    public static void SetBomb(GameObject bo)
+    {
+        bomb = bo;
+    }
+    
     public void NewGame()
     {
         Debug.Log("NEW");

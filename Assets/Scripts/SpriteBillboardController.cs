@@ -11,10 +11,6 @@ public class SpriteBillboardController : MonoBehaviour
     void Start()
     {
         activeCamera = Camera.main;
-        if (activeCamera)
-        {
-            Debug.Log("Found!");
-        }
     }
 
     // Update is called once per frame
@@ -22,10 +18,6 @@ public class SpriteBillboardController : MonoBehaviour
     {
         activeCamera = Camera.main;
         
-        if (activeCamera)
-        {
-            Debug.Log("Found!");
-        }
         transform.LookAt(activeCamera.transform);
         transform.Rotate(-90, 180, 0);
     }
