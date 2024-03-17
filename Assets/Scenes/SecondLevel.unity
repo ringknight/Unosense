@@ -1106,6 +1106,7 @@ Transform:
   - {fileID: 695506528}
   - {fileID: 583287350}
   - {fileID: 1732404339}
+  - {fileID: 1394241494}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &468137843
@@ -1179,43 +1180,43 @@ PrefabInstance:
     - target: {fileID: 5465054771414739745, guid: 1e7dccaa1ed398a43a5f000bf187db88,
         type: 3}
       propertyPath: lasers.Array.size
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5465054771414739745, guid: 1e7dccaa1ed398a43a5f000bf187db88,
         type: 3}
       propertyPath: 'lasers.Array.data[0]'
       value: 
-      objectReference: {fileID: 1394241495}
+      objectReference: {fileID: 1626249703}
     - target: {fileID: 5465054771414739745, guid: 1e7dccaa1ed398a43a5f000bf187db88,
         type: 3}
       propertyPath: 'lasers.Array.data[1]'
       value: 
-      objectReference: {fileID: 1626249703}
+      objectReference: {fileID: 381712565}
     - target: {fileID: 5465054771414739745, guid: 1e7dccaa1ed398a43a5f000bf187db88,
         type: 3}
       propertyPath: 'lasers.Array.data[2]'
       value: 
-      objectReference: {fileID: 381712565}
+      objectReference: {fileID: 254791693}
     - target: {fileID: 5465054771414739745, guid: 1e7dccaa1ed398a43a5f000bf187db88,
         type: 3}
       propertyPath: 'lasers.Array.data[3]'
       value: 
-      objectReference: {fileID: 254791693}
+      objectReference: {fileID: 1848356226}
     - target: {fileID: 5465054771414739745, guid: 1e7dccaa1ed398a43a5f000bf187db88,
         type: 3}
       propertyPath: 'lasers.Array.data[4]'
       value: 
-      objectReference: {fileID: 1848356226}
+      objectReference: {fileID: 1514509239}
     - target: {fileID: 5465054771414739745, guid: 1e7dccaa1ed398a43a5f000bf187db88,
         type: 3}
       propertyPath: 'lasers.Array.data[5]'
       value: 
-      objectReference: {fileID: 1514509239}
+      objectReference: {fileID: 1804488452}
     - target: {fileID: 5465054771414739745, guid: 1e7dccaa1ed398a43a5f000bf187db88,
         type: 3}
       propertyPath: 'lasers.Array.data[6]'
       value: 
-      objectReference: {fileID: 1804488452}
+      objectReference: {fileID: 1638123453}
     - target: {fileID: 5465054771414739745, guid: 1e7dccaa1ed398a43a5f000bf187db88,
         type: 3}
       propertyPath: 'lasers.Array.data[7]'
@@ -1267,7 +1268,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 468137844}
-  - {fileID: 1394241494}
   - {fileID: 1638123452}
   - {fileID: 1626249702}
   - {fileID: 381712564}
@@ -2628,7 +2628,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 583287350}
+    m_TransformParent: {fileID: 445232399}
     m_Modifications:
     - target: {fileID: 2202967056330611032, guid: b1466297bd6ebfc42b37ebe960c1ae66,
         type: 3}
@@ -2658,7 +2658,7 @@ PrefabInstance:
     - target: {fileID: 4029971526395536118, guid: b1466297bd6ebfc42b37ebe960c1ae66,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 4029971526395536118, guid: b1466297bd6ebfc42b37ebe960c1ae66,
         type: 3}
@@ -3657,13 +3657,13 @@ PrefabInstance:
     - target: {fileID: 5465054771414739745, guid: 1e7dccaa1ed398a43a5f000bf187db88,
         type: 3}
       propertyPath: lasers.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5465054771414739745, guid: 1e7dccaa1ed398a43a5f000bf187db88,
         type: 3}
       propertyPath: 'lasers.Array.data[0]'
       value: 
-      objectReference: {fileID: 2064146226}
+      objectReference: {fileID: 1394241495}
     - target: {fileID: 5465054771414739745, guid: 1e7dccaa1ed398a43a5f000bf187db88,
         type: 3}
       propertyPath: 'lasers.Array.data[1]'
