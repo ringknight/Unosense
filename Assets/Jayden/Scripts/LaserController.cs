@@ -6,6 +6,7 @@ public class LaserController : MonoBehaviour
 {
     [SerializeField] public GameObject[] lasers;
     public bool activated;
+    private bool activatedDiff;
     public GameObject puzzleElement;
     void Start()
     {
@@ -20,16 +21,23 @@ public class LaserController : MonoBehaviour
             activated = puzzleElement.GetComponent<PushButton>().pushed;
         }
 
-
-        foreach(GameObject laser in lasers)
+        if(activated && !activatedDiff)
         {
-            if(activated && laser.activeInHierarchy == false)
-            {
-                laser.SetActive(true);
-                laser.GetComponent<LaserManager>().ActivateLaser();
-            }
+            activatedDiff = true;
+            GetComponent<AudioSource>().Play();
         }
 
+        if(lasers.Length != 0)
+        {
+            foreach(GameObject laser in lasers)
+            {
+                if(activated && laser.activeInHierarchy == false)
+                {
+                    laser.SetActive(true);
+                    laser.GetComponent<LaserManager>().ActivateLaser();
+                }
+            }
+        }
 
         //if(activated && laser.activeInHierarchy)
         //{
@@ -52,6 +60,7 @@ public class LaserController : MonoBehaviour
             if((laser.GetComponent<LaserManager>().laserActive == false && laser.activeInHierarchy) || activated == false)
             {
                 activated = false;
+                activatedDiff = false;
                 if(puzzleElement.name.Contains("Push Button"))
                 {
                     puzzleElement.GetComponent<PushButton>().pushed = false;

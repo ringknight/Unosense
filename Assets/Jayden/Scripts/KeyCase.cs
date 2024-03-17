@@ -34,8 +34,13 @@ public class KeyCase : MonoBehaviour
     {
         if (collision.gameObject.transform.tag == "Hands" && activated)
         {
-            keyPickedUp = true;
-            key.SetActive(false);
+            if(!keyPickedUp)
+            {
+                GetComponent<AudioSource>().Play();
+                keyPickedUp = true;
+                key.SetActive(false);
+            }
+            
         }
     }
 }
