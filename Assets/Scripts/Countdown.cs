@@ -32,11 +32,13 @@ public class CountdownTimer : MonoBehaviour
         }
 
         // Countdown finished
-        countdownText.text = "BOOM";
+        Explode();
     }
 
     void Explode()
     {
+        countdownText.text = "BOOM";
+        GlobalGameManager.instance.BombExplode();
         Debug.Log("EXPLODE!!!");
     }
 }

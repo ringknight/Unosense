@@ -13,7 +13,7 @@ public class GlobalGameManager : MonoBehaviour
     public Button creditsButton;
     public Button exitButton;
 
-    private static GlobalGameManager instance;
+    public static GlobalGameManager instance;
     public static List<GameObject> activeWires = new List<GameObject>();
     public static GameObject bomb;
 
@@ -97,8 +97,18 @@ public class GlobalGameManager : MonoBehaviour
 
         } else
         {
+            BombExplode();
             Debug.Log("Wrong wire!");
             Debug.Log("BOOM!");
+        }
+    }
+
+    public void BombExplode()
+    {
+        Bomb script = bomb.GetComponent<Bomb>();
+        if (script != null)
+        {
+            script.Explode();
         }
     }
 
